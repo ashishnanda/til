@@ -1,12 +1,11 @@
-
-
+---
 title: “Splitting an apple by hand is about leverage”
-
 tags: [physics, everyday-science, technique]
+---
 
 Splitting an apple with bare hands requires strength, but grip and leverage determine how effectively that strength is used.
 
-The technique
+**The technique**
 
 1. Dry your hands and the apple, and remove the stem.
 2. Hold the apple with the stem indentation facing up.
