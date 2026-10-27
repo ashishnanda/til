@@ -3,6 +3,7 @@ layout: default
 title: Notes
 ---
 <h1 class="page-title">Today I Learned</h1>
-<p class="lede">{{ site.description }} {{ site.posts.size }} notes so far.</p>
+<p class="lede">{{ site.description }} {{ site.posts.size }} notes so far.
+  Also: my <a href="{{ '/reading/' | relative_url }}">reading list</a>.</p>
 
 {% include note-list.html notes=site.posts %}

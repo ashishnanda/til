@@ -4,7 +4,7 @@
   <li class="note-item">
     <time class="note-date" datetime="{{ note.date | date_to_xmlschema }}">{{ note.date | date: "%Y-%m-%d" }}</time>
     <div class="note-body">
-      <a class="note-link" href="{{ note.url | relative_url }}">{{ note.title }}</a>
+      <a class="note-link" href="{{ note.url | relative_url }}">{{ note.title | escape }}</a>
       {% include tags.html tags=note.tags %}
     </div>
   </li>

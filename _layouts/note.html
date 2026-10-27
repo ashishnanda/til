@@ -3,7 +3,7 @@ layout: default
 ---
 <article class="note">
   <header class="note-header">
-    <h1 class="note-title">{{ page.title }}</h1>
+    <h1 class="note-title">{{ page.title | escape }}</h1>
     <p class="note-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
     </p>
@@ -16,10 +16,10 @@ layout: default
 
   <nav class="note-nav">
     {% if page.previous %}
-      <a class="prev" href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a>
+      <a class="prev" href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title | escape }}</a>
     {% endif %}
     {% if page.next %}
-      <a class="next" href="{{ page.next.url | relative_url }}">{{ page.next.title }} &rarr;</a>
+      <a class="next" href="{{ page.next.url | relative_url }}">{{ page.next.title | escape }} &rarr;</a>
     {% endif %}
   </nav>
 </article>

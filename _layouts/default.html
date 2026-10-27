@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
+  {%- comment -%}No JavaScript on this site: block scripts and plugins outright, as a backstop
+  for any markup that slips into notes created from issues.{%- endcomment %}
+  <meta http-equiv="Content-Security-Policy" content="script-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'none'">
   {% seo %}
   {% feed_meta %}
   <link rel="stylesheet" href="{{ '/assets/css/til.css' | relative_url }}">
@@ -15,6 +18,7 @@
       <nav class="site-nav">
         <a href="{{ '/' | relative_url }}">Notes</a>
         <a href="{{ '/tags/' | relative_url }}">Tags</a>
+        <a href="{{ '/reading/' | relative_url }}">Reading</a>
         <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
       </nav>
     </div>

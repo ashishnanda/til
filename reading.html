@@ -1,0 +1,25 @@
+---
+layout: default
+title: Reading list
+permalink: /reading/
+---
+<h1 class="page-title">Reading list</h1>
+<p class="lede">Links saved to read later, and notes on the ones I've read.</p>
+
+{% comment %}Entries come from _data/reading.yml (written by the issue inbox).
+Every value is user-supplied: always output it with | escape.{% endcomment %}
+{% assign entries = site.data.reading %}
+{% assign to_read = entries | where: "status", "to-read" | sort: "added" | reverse %}
+{% assign done = entries | where: "status", "read" | sort: "read" | reverse %}
+
+<section class="reading-section" id="to-read">
+  <h2>To read <span class="count">{{ to_read.size }}</span></h2>
+  {% assign items = to_read %}{% assign date_key = "added" %}
+  {% include reading-list.html items=items date_key=date_key %}
+</section>
+
+<section class="reading-section" id="read">
+  <h2>Read <span class="count">{{ done.size }}</span></h2>
+  {% assign items = done %}{% assign date_key = "read" %}
+  {% include reading-list.html items=items date_key=date_key %}
+</section>
