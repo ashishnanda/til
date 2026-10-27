@@ -13,6 +13,7 @@
   --hl-string: #0a3069;
   --hl-number: #0550ae;
   --hl-name: #8250df;
+  --note-bg: #f7f8fa;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,6 +31,7 @@
     --hl-string: #a5d6ff;
     --hl-number: #79c0ff;
     --hl-name: #d2a8ff;
+    --note-bg: #1b1e22;
   }
 }
 
@@ -119,6 +121,24 @@ main.wrap { padding-top: 2rem; padding-bottom: 3rem; }
 .tag-index { margin-bottom: 2rem; }
 .tag-section { scroll-margin-top: 1rem; }
 .tag-section h2 { font-size: 1.2rem; margin: 2rem 0 0.25rem; }
+
+/* Reading list */
+.reading-section { scroll-margin-top: 1rem; margin-bottom: 2.5rem; }
+.reading-section h2 { font-size: 1.2rem; margin: 0 0 0.25rem; }
+.reading-section h2 .count { color: var(--muted); font-weight: 400; font-size: 0.9rem; margin-left: 0.25rem; }
+.reading-section .note-body { flex: 1; }
+.reading-host { display: block; color: var(--muted); font-size: 0.82rem; overflow-wrap: anywhere; }
+.note-link { overflow-wrap: anywhere; }
+.reading-note {
+  margin: 0.4rem 0 0;
+  padding: 0.35rem 0.7rem;
+  border-left: 3px solid var(--border);
+  background: var(--note-bg);
+  border-radius: 0 4px 4px 0;
+  font-size: 0.93rem;
+  overflow-wrap: anywhere;
+}
+.empty { color: var(--muted); }
 
 /* Single note */
 .note-header { margin-bottom: 1.75rem; }

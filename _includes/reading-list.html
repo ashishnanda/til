@@ -1,0 +1,22 @@
+{% comment %}Renders reading-list entries. Usage:
+{% include reading-list.html items=x date_key=y %} (y is "added" or "read").
+All values are user-supplied: keep every output escaped.{% endcomment %}
+{% if include.items.size > 0 %}
+<ul class="note-list">
+  {% for item in include.items %}
+  {% assign when = item[include.date_key] %}
+  <li class="note-item">
+    <time class="note-date" datetime="{{ when | date_to_xmlschema }}">{{ when | date: "%Y-%m-%d" }}</time>
+    <div class="note-body">
+      <a class="note-link" href="{{ item.url | escape }}" rel="nofollow noopener">{{ item.title | escape }}</a>
+      <span class="reading-host">{{ item.url | split: "/" | slice: 2 | first | escape }}</span>
+      {% if item.note and item.note != "" %}
+      <p class="reading-note">{{ item.note | escape | newline_to_br }}</p>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="empty">Nothing here yet.</p>
+{% endif %}
