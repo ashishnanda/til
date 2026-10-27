@@ -1,0 +1,43 @@
+# Site settings
+title: Today I Learned
+description: Short notes on things I learn day to day.
+author: ashishnanda
+lang: en
+
+# The repo is named "til", so the site is served from https://<user>.github.io/til
+baseurl: "/til"
+url: "https://ashishnanda.github.io" # used for absolute URLs in the feed, sitemap and SEO tags
+
+# Build settings (GitHub Pages defaults: kramdown + rouge)
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+permalink: /:year/:month/:day/:title/
+timezone: UTC
+
+# No theme: this site ships its own layouts and CSS.
+# (Without this, GitHub Pages silently adds the default "primer" theme.)
+theme: null
+
+# Only plugins on the GitHub Pages allow-list
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Every note in _posts uses the "note" layout by default
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: note
+
+exclude:
+  - README.md
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
