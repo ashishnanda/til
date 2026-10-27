@@ -1,5 +1,5 @@
 ---
-title: “Splitting an apple by hand is about leverage”
+title: Splitting an apple by hand is about leverage
 tags: [physics, everyday-science, technique]
 ---
 
