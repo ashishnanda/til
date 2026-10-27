@@ -1,10 +1,7 @@
 
 
-
-
-⸻
-
 title: “Splitting an apple by hand is about leverage”
+
 tags: [physics, everyday-science, technique]
 
 Splitting an apple with bare hands requires strength, but grip and leverage determine how effectively that strength is used.
